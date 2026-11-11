@@ -1,0 +1,16 @@
+{
+  "arduino_cli": "1.6.0",
+  "arduino_core": "esp32:esp32@3.3.10",
+  "fqbn": "esp32:esp32:esp32s3:FlashSize=16M,PartitionScheme=app3M_fat9M_16MB,PSRAM=opi,CDCOnBoot=cdc,USBMode=hwcdc,UploadMode=default",
+  "waveshare_repository": "https://github.com/waveshareteam/ESP32-S3-Touch-AMOLED-1.75.git",
+  "waveshare_commit": "e4344e70c2fa78a13e8a06566507f1ba8af6672a",
+  "gfx_library_version": "1.6.4 (Waveshare bundled revision)",
+  "factory_file": "ESP32-S3-Touch-AMOLED-1.75-FactoryOnly-260805.bin",
+  "factory_sha256": "2b7e01ff1f37027385a3820e006f945464cfcee2a05954b3239cf75f250080b6",
+  "cli_assets": {
+    "Darwin-arm64": ["macOS_ARM64", "dc70f037fcbc8e7add892282bed5bab5eac317ff00bf0dd2f21e4a8e1d338a1c"],
+    "Darwin-x86_64": ["macOS_64bit", "af6a30cf5f57cc076b45fe55c6fd389440156f70706e7f8d3302a11a9fe32913"],
+    "Linux-x86_64": ["Linux_64bit", "321ee249f44c78053234fec0f36101092bc6021bf24939e15e0cc2449c5ed250"],
+    "Linux-aarch64": ["Linux_ARM64", "2ed4e1436bb3be1265966af8eba95dd25e28f3a9f92d0a58d371ed14dbaf550f"]
+  }
+}

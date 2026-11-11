@@ -1,0 +1,12 @@
+.DS_Store
+build/
+.venv/
+__pycache__/
+*.pyc
+backups/
+local/
+*.bin
+*.elf
+*.map
+*.log
+.env*

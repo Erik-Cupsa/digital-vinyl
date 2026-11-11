@@ -1,0 +1,22 @@
+name: Check and compile
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install hash-pinned Python tools
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --require-hashes -r requirements.lock
+      - name: Check renderer, protocol, bridge, Chrome connector and recovery gate
+        run: make check
+      - name: Prepare local extension bundle
+        run: .venv/bin/python tools/prepare_extension.py
+      - name: Install pinned toolchain and display driver
+        run: python3 tools/project.py setup
+      - name: Compile Waveshare ESP32-S3 Touch AMOLED 1.75 firmware
+        run: python3 tools/project.py build

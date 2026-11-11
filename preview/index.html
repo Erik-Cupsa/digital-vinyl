@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital Vinyl</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+  <header><h1>Digital Vinyl</h1><p>A small ritual for whatever’s playing.</p></header>
+  <section class="player">
+    <div class="platter"><canvas width="466" height="466" aria-label="Round record display preview" role="img"></canvas></div>
+    <div class="details">
+      <div class="modes" role="group" aria-label="Source"><button id="live" aria-pressed="true">Live</button><button id="demo" aria-pressed="false">Rehearsal</button></div>
+      <p id="source" class="source" role="status">Waiting for a music connection</p>
+      <h2 id="title">Your next record</h2><p id="artist">Start the local bridge to connect your player.</p>
+      <div id="demo-controls" hidden>
+        <div class="buttons"><button id="play">Pause</button><button id="next">Next record</button></div>
+        <button id="reset" class="text-button">Restart the take</button>
+      </div>
+      <p id="detail">The preview will not invent a live track. Try Rehearsal to explore the animation.</p>
+      <button id="clean" class="text-button">Clean view · F</button>
+    </div>
+  </section>
+  <footer><p>Making tech fun again · Episode two</p><p id="device">Preview only · physical display not yet tested</p></footer>
+</main><script src="app.js"></script></body>
+</html>

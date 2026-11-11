@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Digital Vinyl — local display companion",
+  "version": "1.0.0",
+  "description": "Send the selected music tab's current track to your own local Digital Vinyl display bridge.",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage"],
+  "host_permissions": ["https://music.youtube.com/*", "http://127.0.0.1/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html", "default_title": "Digital Vinyl"},
+  "content_scripts": [{
+    "matches": ["https://music.youtube.com/*"],
+    "js": ["extract.js", "content.js"],
+    "run_at": "document_idle"
+  }]
+}
